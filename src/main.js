@@ -30,7 +30,15 @@ function collectState() {
 return {                                            // расширьте существующий return вот так
     ...state,
     rowsPerPage,
-    page
+    page,
+     filters: {
+            date: state.date || '',
+            customer: state.customer || '',
+            seller: state.seller || '',
+            totalFrom: state.totalFrom || '',
+            totalTo: state.totalTo || '',
+            search: state.search || ''
+        }
 };
 
 }
